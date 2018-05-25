@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Utilisateurs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<h1>Liste des utilisateurs</h1>
+
+
+<p>Bienvenue sur Seecretspot
+<table>
+    <th:block th:each="user : ${listUser}">
+        <tr>
+            <td th:text="${user.nom}">...</td>
+            <td th:text="${user.prenom}">...</td>
+        </tr>
+    </th:block>
+</table>
+</p>
+</body>
+</html>
